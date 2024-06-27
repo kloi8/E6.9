@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+        {% csrf_token %}
+            {{ form.as_p }}
+                <input class="chat-button" type="submit" value="Sing up">
+        </form>
+            <div>
+                <a href="{% url 'login' %}" class="chat-button">Or login</a>
+            </div>
+
+    </div>
+</body>
+</html>

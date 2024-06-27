@@ -1,0 +1,27 @@
+{% block title %}
+Account
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+  <a href="{% url 'index' %}" class="leaveButton">back</a>
+    <img class="circle" src="{{ user.account.avatar.url }}"/>
+    <div class="media-body">
+      <h2 class="user-h2">{{ user.username }}</h2>
+    </div>
+    <form method="POST" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="legend">Profile</legend>
+      {{ user_update_form }}
+      <!-- User form -->
+      {{ account_update_form }}
+      <!-- Account form -->
+    </fieldset>
+    <div>
+      <button type="submit" class="chat-button">Update</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
