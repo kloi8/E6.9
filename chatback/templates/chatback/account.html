@@ -1,9 +1,10 @@
-{% block title %}
-Account
-{% endblock title %}
-
-{% block content %}
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>User's account</title>
+</head>
+<body>
 <div class="container">
   <a href="{% url 'index' %}" class="leaveButton">back</a>
     <img class="circle" src="{{ user.account.avatar.url }}"/>
@@ -24,4 +25,5 @@ Account
     </div>
   </form>
 </div>
-{% endblock content %}
+</body>
+</html>
